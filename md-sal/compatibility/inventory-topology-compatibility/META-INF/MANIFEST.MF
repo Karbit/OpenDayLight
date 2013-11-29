@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727104127
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-Activator: org.opendaylight.controller.sal.compability.ComponentA
+ ctivator
+Bundle-ManifestVersion: 2
+Bundle-Name: Forwarding Rules Manager Adapterfor MD-SAL
+Bundle-SymbolicName: org.opendaylight.controller.inventory-topology-comp
+ atibility
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.opendaylight.controller.sal.compability
+Tool: Bnd-2.1.0.20130426-122213

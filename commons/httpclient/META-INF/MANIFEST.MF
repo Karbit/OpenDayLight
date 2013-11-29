@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727086695
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ClassPath: .,httpclient-4.3.jar,httpcore-4.3.jar,commons-logging-
+ 1.1.3.jar
+Bundle-ManifestVersion: 2
+Bundle-Name: commons.httpclient
+Bundle-SymbolicName: org.opendaylight.controller.commons.httpclient
+Bundle-Version: 0.1.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: httpclient,httpcore,commons-logging
+Embed-Transitive: false
+Embedded-Artifacts: httpclient-4.3.jar;g="org.apache.httpcomponents";a="
+ httpclient";v="4.3",httpcore-4.3.jar;g="org.apache.httpcomponents";a="h
+ ttpcore";v="4.3",commons-logging-1.1.3.jar;g="commons-logging";a="commo
+ ns-logging";v="1.1.3"
+Export-Package: org.opendaylight.controller.commons.httpclient;version="
+ 0.1.1.SNAPSHOT"
+Ignore-Package: org.apache.log,org.apache.avalon.framework.logger,org.ap
+ ache.commons.codec.binary
+Import-Package: javax.crypto,javax.crypto.spec,javax.net,javax.net.ssl,j
+ avax.security.auth.x500,javax.servlet,org.apache.log4j,org.ietf.jgss
+Tool: Bnd-1.50.0

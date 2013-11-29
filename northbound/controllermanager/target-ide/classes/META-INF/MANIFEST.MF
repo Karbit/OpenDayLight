@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385726705470
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: controllermanager.northbound
+Bundle-SymbolicName: controllermanager.northbound
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.controllermanager.northbound
+ ;uses:="javax.ws.rs,org.opendaylight.controller.northbound.commons,org.
+ opendaylight.controller.sal.utils,org.opendaylight.controller.sal.core,
+ org.opendaylight.controller.containermanager,org.opendaylight.controlle
+ r.sal.authorization,org.opendaylight.controller.northbound.commons.util
+ s,org.opendaylight.controller.switchmanager,org.opendaylight.controller
+ .northbound.commons.exception,javax.ws.rs.core,org.codehaus.jackson.ann
+ otate,javax.xml.bind.annotation";version="0.0.1.SNAPSHOT"
+Ignore-Package: org.codehaus.enunciate.jaxrs
+Import-Package: com.sun.jersey.spi.container.servlet;version="[1.17,2)",
+ javax.ws.rs;version="[1.1,2)",javax.ws.rs.core;version="[1.1,2)",javax.
+ xml.bind,javax.xml.bind.annotation,org.apache.catalina.filters;version=
+ "[7.0,8)",org.apache.commons.lang3.tuple;version="[3.1,4)",org.apache.c
+ ommons.logging,org.codehaus.jackson.annotate;version="[1.9,2)",org.code
+ haus.jackson.jaxrs;version="[1.9,2)",org.opendaylight.controller.contai
+ nermanager,org.opendaylight.controller.northbound.commons,org.opendayli
+ ght.controller.northbound.commons.exception,org.opendaylight.controller
+ .northbound.commons.utils,org.opendaylight.controller.sal.authorization
+ ;version="[0.5,1)",org.opendaylight.controller.sal.core;version="[0.5,1
+ )",org.opendaylight.controller.sal.utils;version="[0.5,1)",org.opendayl
+ ight.controller.switchmanager,org.opendaylight.controller.usermanager,o
+ rg.slf4j;version="[1.7,2)"
+Jaxrs-Resources: ,org.opendaylight.controller.controllermanager.northbou
+ nd.ControllerManagerNorthbound
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
+Web-ContextPath: /controller/nb/v2/controllermanager

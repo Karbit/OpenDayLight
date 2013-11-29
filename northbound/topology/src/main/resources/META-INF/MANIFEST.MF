@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727111929
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: topology.northbound
+Bundle-SymbolicName: org.opendaylight.controller.topology.northbound
+Bundle-Version: 0.4.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Ignore-Package: org.codehaus.enunciate.jaxrs
+Import-Package: com.sun.jersey.spi.container.servlet,javax.ws.rs;version
+ ="[1.1,2)",javax.ws.rs.core;version="[1.1,2)",javax.xml.bind,javax.xml.
+ bind.annotation,org.apache.catalina.filters,org.codehaus.jackson.annota
+ te;version="[1.9,2)",org.codehaus.jackson.jaxrs;version="[1.9,2)",org.o
+ pendaylight.controller.containermanager,org.opendaylight.controller.nor
+ thbound.commons,org.opendaylight.controller.northbound.commons.exceptio
+ n,org.opendaylight.controller.northbound.commons.utils,org.opendaylight
+ .controller.sal.authorization;version="[0.5,1)",org.opendaylight.contro
+ ller.sal.core;version="[0.5,1)",org.opendaylight.controller.sal.packet;
+ version="[0.5,1)",org.opendaylight.controller.sal.packet.address;versio
+ n="[0.5,1)",org.opendaylight.controller.sal.utils;version="[0.5,1)",org
+ .opendaylight.controller.switchmanager;version="[0.5,1)",org.opendaylig
+ ht.controller.topologymanager,org.opendaylight.controller.usermanager,o
+ rg.slf4j;version="[1.7,2)"
+Jaxrs-Resources: ,org.opendaylight.controller.topology.northbound.Topolo
+ gyNorthboundJAXRS
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
+Web-ContextPath: /controller/nb/v2/topology

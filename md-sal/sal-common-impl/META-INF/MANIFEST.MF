@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727095593
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.controller.sal-common-impl
+Bundle-SymbolicName: org.opendaylight.controller.sal-common-impl
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.md.sal.common.impl;uses:="or
+ g.opendaylight.controller.md.sal.common.api.data,org.opendaylight.contr
+ oller.md.sal.common.api.routing,org.opendaylight.yangtools.concepts";ve
+ rsion="1.0.0.SNAPSHOT",org.opendaylight.controller.md.sal.common.impl.r
+ outing;uses:="org.opendaylight.controller.md.sal.common.api.data,org.op
+ endaylight.yangtools.concepts";version="1.0.0.SNAPSHOT",org.opendayligh
+ t.controller.md.sal.common.impl.service;uses:="org.opendaylight.control
+ ler.md.sal.common.api.data";version="1.0.0.SNAPSHOT",org.opendaylight.c
+ ontroller.md.sal.common.impl.util;uses:="org.opendaylight.yangtools.con
+ cepts";version="1.0.0.SNAPSHOT"
+Import-Package: com.google.common.base;version="[14.0,15)",com.google.co
+ mmon.collect;version="[14.0,15)",org.opendaylight.controller.md.sal.com
+ mon.api,org.opendaylight.controller.md.sal.common.api.data,org.opendayl
+ ight.controller.md.sal.common.api.routing,org.opendaylight.yangtools.co
+ ncepts;version="[0.1,1)"
+Tool: Bnd-2.1.0.20130426-122213

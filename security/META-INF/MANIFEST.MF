@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727110099
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: security
+Bundle-SymbolicName: org.opendaylight.controller.security
+Bundle-Version: 0.4.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.security;uses:="org.apache.c
+ atalina.realm,org.opendaylight.controller.sal.authorization,org.openday
+ light.controller.usermanager,org.slf4j,org.opendaylight.controller.sal.
+ utils";version="0.4.1.SNAPSHOT"
+Fragment-Host: org.apache.catalina
+Import-Package: javax.servlet;version="[2.6,3)",org.apache.catalina;vers
+ ion="[7.0,8)",org.apache.catalina.connector;version="[7.0,8)",org.apach
+ e.catalina.realm;version="[7.0,8)",org.apache.catalina.valves;version="
+ [7.0,8)",org.opendaylight.controller.sal.authorization;version="[0.5,1)
+ ",org.opendaylight.controller.sal.utils;version="[0.5,1)",org.opendayli
+ ght.controller.usermanager,org.slf4j;version="[1.7,2)"
+Tool: Bnd-1.50.0

@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727114171
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: appauth
+Bundle-SymbolicName: org.opendaylight.controller.appauth
+Bundle-Version: 0.4.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.appauth;uses:="org.opendayli
+ ght.controller.appauth.authorization";version="0.4.1.SNAPSHOT",org.open
+ daylight.controller.appauth.authorization;uses:="org.opendaylight.contr
+ oller.containermanager,org.opendaylight.controller.sal.authorization,or
+ g.opendaylight.controller.usermanager,org.slf4j,org.opendaylight.contro
+ ller.sal.utils";version="0.4.1.SNAPSHOT"
+Import-Package: org.apache.felix.dm;version="[3.0,4)",org.opendaylight.c
+ ontroller.containermanager,org.opendaylight.controller.sal.authorizatio
+ n,org.opendaylight.controller.sal.utils,org.opendaylight.controller.use
+ rmanager,org.slf4j;version="[1.7,2)"
+Tool: Bnd-1.50.0

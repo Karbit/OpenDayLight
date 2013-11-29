@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385723402695
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-Activator: org.opendaylight.controller.md.statistics.manager.Stat
+ isticsManagerActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.controller.md.statistics-manager
+Bundle-SymbolicName: org.opendaylight.controller.md.statistics-manager
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.opendaylight.controller.md.statistics.manager
+Tool: Bnd-2.1.0.20130426-122213

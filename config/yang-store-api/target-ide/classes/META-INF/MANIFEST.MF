@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727118699
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.controller.yang-store-api
+Bundle-SymbolicName: org.opendaylight.controller.yang-store-api
+Bundle-Version: 0.2.3.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.config.yang.store.api;uses:=
+ "org.opendaylight.yangtools.yang.model.api,org.opendaylight.controller.
+ config.yangjmxgenerator";version="0.2.3.SNAPSHOT"
+Import-Package: org.opendaylight.controller.config.yangjmxgenerator;vers
+ ion="[0.2,1)",org.opendaylight.yangtools.yang.model.api;version="[0.5,1
+ )"
+Tool: Bnd-1.50.0

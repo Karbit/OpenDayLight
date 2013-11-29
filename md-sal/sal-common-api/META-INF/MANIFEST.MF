@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727094772
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.controller.sal-common-api
+Bundle-SymbolicName: org.opendaylight.controller.sal-common-api
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.md.sal.common.api.data;uses:
+ ="org.opendaylight.controller.md.sal.common.api,org.opendaylight.yangto
+ ols.concepts,org.opendaylight.yangtools.yang.common";version="1.0.0.SNA
+ PSHOT",org.opendaylight.controller.md.sal.common.api.notify;uses:="org.
+ opendaylight.yangtools.concepts";version="1.0.0.SNAPSHOT",org.opendayli
+ ght.controller.md.sal.common.api;uses:="org.opendaylight.yangtools.conc
+ epts";version="1.0.0.SNAPSHOT",org.opendaylight.controller.md.sal.commo
+ n.api.routing;uses:="org.opendaylight.yangtools.concepts";version="1.0.
+ 0.SNAPSHOT"
+Import-Package: org.opendaylight.yangtools.concepts;version="[0.1,1)",or
+ g.opendaylight.yangtools.yang.common;version="[0.5,1)"
+Tool: Bnd-2.1.0.20130426-122213

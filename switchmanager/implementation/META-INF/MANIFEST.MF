@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727105753
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-Activator: org.opendaylight.controller.switchmanager.internal.Act
+ ivator
+Bundle-ManifestVersion: 2
+Bundle-Name: switchmanager.implementation
+Bundle-SymbolicName: org.opendaylight.controller.switchmanager.implement
+ ation
+Bundle-Version: 0.4.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: javax.xml.bind.annotation,org.apache.commons.lang3.build
+ er;version="[3.1,4)",org.apache.felix.dm;version="[3.0,4)",org.apache.f
+ elix.service.command;status=provisional;version="[0.8,1)",org.eclipse.o
+ sgi.framework.console;version="[1.1,2)",org.opendaylight.controller.clu
+ stering.services,org.opendaylight.controller.configuration,org.opendayl
+ ight.controller.sal.core;version="[0.5,1)",org.opendaylight.controller.
+ sal.inventory;version="[0.5,1)",org.opendaylight.controller.sal.packet;
+ version="[0.5,1)",org.opendaylight.controller.sal.reader;version="[0.5,
+ 1)",org.opendaylight.controller.sal.utils;version="[0.5,1)",org.openday
+ light.controller.statisticsmanager;version="[0.4,1)",org.opendaylight.c
+ ontroller.switchmanager,org.osgi.framework;version="[1.7,2)",org.slf4j;
+ version="[1.7,2)"
+Tool: Bnd-1.50.0

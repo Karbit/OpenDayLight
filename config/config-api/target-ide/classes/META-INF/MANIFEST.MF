@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727088089
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: org.opendaylight.controller.config-api
+Bundle-SymbolicName: org.opendaylight.controller.config-api
+Bundle-Version: 0.2.3.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.config.api;uses:="org.openda
+ ylight.controller.config.api.jmx,org.opendaylight.controller.config.api
+ .jmx.constants,javax.management,org.opendaylight.yangtools.concepts,org
+ .opendaylight.controller.config.api.annotations,org.opendaylight.contro
+ ller.config.spi,org.opendaylight.controller.config.api.runtime";version
+ ="0.2.3.SNAPSHOT",org.opendaylight.controller.config.api.annotations;ve
+ rsion="0.2.3.SNAPSHOT",org.opendaylight.controller.config.spi;uses:="or
+ g.opendaylight.yangtools.concepts,org.opendaylight.controller.config.ap
+ i,org.osgi.framework,org.opendaylight.controller.config.api.annotations
+ ";version="0.2.3.SNAPSHOT",org.opendaylight.controller.config.api.jmx;u
+ ses:="javax.management,org.opendaylight.controller.config.api,org.opend
+ aylight.controller.config.api.jmx.constants";version="0.2.3.SNAPSHOT",o
+ rg.opendaylight.controller.config.api.jmx.constants;uses:="javax.manage
+ ment";version="0.2.3.SNAPSHOT",org.opendaylight.controller.config.api.r
+ untime;uses:="javax.management";version="0.2.3.SNAPSHOT"
+Import-Package: javax.management,org.opendaylight.yangtools.concepts;ver
+ sion="[0.1,1)",org.osgi.framework;version="[1.7,2)"
+Tool: Bnd-1.50.0

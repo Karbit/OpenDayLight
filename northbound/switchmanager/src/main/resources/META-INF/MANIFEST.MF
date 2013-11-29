@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727111621
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-ManifestVersion: 2
+Bundle-Name: switchmanager.northbound
+Bundle-SymbolicName: org.opendaylight.controller.switchmanager.northboun
+ d
+Bundle-Version: 0.4.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.switchmanager.northbound;use
+ s:="org.opendaylight.controller.sal.core,org.codehaus.jackson.annotate,
+ javax.xml.bind.annotation,javax.ws.rs,org.opendaylight.controller.north
+ bound.commons,org.opendaylight.controller.sal.utils,org.opendaylight.co
+ ntroller.containermanager,org.opendaylight.controller.sal.authorization
+ ,org.opendaylight.controller.northbound.commons.utils,org.opendaylight.
+ controller.switchmanager,org.opendaylight.controller.northbound.commons
+ .exception,javax.ws.rs.core";version="0.4.1.SNAPSHOT"
+Ignore-Package: org.codehaus.enunciate.jaxrs
+Import-Package: com.sun.jersey.spi.container.servlet,javax.ws.rs;version
+ ="[1.1,2)",javax.ws.rs.core;version="[1.1,2)",javax.xml.bind,javax.xml.
+ bind.annotation,org.apache.catalina.filters,org.apache.commons.lang3.tu
+ ple;version="[3.1,4)",org.apache.commons.logging,org.codehaus.jackson.a
+ nnotate;version="[1.9,2)",org.codehaus.jackson.jaxrs;version="[1.9,2)",
+ org.opendaylight.controller.containermanager,org.opendaylight.controlle
+ r.northbound.commons,org.opendaylight.controller.northbound.commons.exc
+ eption,org.opendaylight.controller.northbound.commons.utils,org.openday
+ light.controller.sal.authorization;version="[0.5,1)",org.opendaylight.c
+ ontroller.sal.core;version="[0.5,1)",org.opendaylight.controller.sal.ut
+ ils;version="[0.5,1)",org.opendaylight.controller.switchmanager;version
+ ="[0.5,1)",org.opendaylight.controller.usermanager,org.slf4j;version="[
+ 1.7,2)"
+Jaxrs-Resources: ,org.opendaylight.controller.switchmanager.northbound.S
+ witchNorthbound
+Originally-Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-1.50.0
+Web-ContextPath: /controller/nb/v2/switchmanager

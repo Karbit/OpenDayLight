@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727102109
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-Activator: org.opendaylight.controller.sal.networkconfig.internal
+ .Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: sal.networkconfiguration.implementation
+Bundle-SymbolicName: org.opendaylight.controller.sal.networkconfiguratio
+ n.implementation
+Bundle-Version: 0.0.2.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.apache.felix.dm;version="[3.0,4)",org.opendaylight.c
+ ontroller.sal.core;version="[0.5,1)",org.opendaylight.controller.sal.ne
+ tworkconfig.bridgedomain,org.opendaylight.controller.sal.utils;version=
+ "[0.5,1)",org.osgi.framework;version="[1.7,2)",org.slf4j;version="[1.7,
+ 2)"
+Tool: Bnd-1.50.0

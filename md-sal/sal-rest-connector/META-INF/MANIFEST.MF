@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1385727099708
+Build-Jdk: 1.7.0_25
+Built-By: JQL
+Bundle-Activator: org.opendaylight.controller.sal.rest.impl.RestconfProv
+ ider
+Bundle-ManifestVersion: 2
+Bundle-Name: MD SAL Restconf Connector
+Bundle-SymbolicName: org.opendaylight.controller.sal-rest-connector
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.opendaylight.controller.sal.rest.api;uses:="javax.ws
+ .rs,javax.ws.rs.core,org.opendaylight.yangtools.yang.data.api";version=
+ "1.0.0.SNAPSHOT"
+Import-Package: com.google.common.base;version="[14.0,15)",com.google.co
+ mmon.collect;version="[14.0,15)",com.google.common.primitives;version="
+ [14.0,15)",com.google.gson;version="[2.2,3)",com.google.gson.stream;ver
+ sion="[2.2,3)",javax.ws.rs,javax.ws.rs.core,javax.ws.rs.ext,javax.xml.n
+ amespace,javax.xml.stream,javax.xml.stream.events,javax.xml.transform,j
+ avax.xml.transform.dom,javax.xml.transform.stream,org.opendaylight.cont
+ roller.sal.core.api,org.opendaylight.controller.sal.core.api.model,org.
+ opendaylight.yangtools.concepts;version="[0.1,1)",org.opendaylight.yang
+ tools.yang.common;version="[0.5,1)",org.opendaylight.yangtools.yang.dat
+ a.api;version="[0.5,1)",org.opendaylight.yangtools.yang.data.impl;versi
+ on="[0.5,1)",org.opendaylight.yangtools.yang.model.api;version="[0.5,1)
+ ",org.opendaylight.yangtools.yang.model.api.type;version="[0.5,1)",org.
+ osgi.framework;version="[1.7,2)",org.osgi.util.tracker;version="[1.5,2)
+ ",org.slf4j;version="[1.7,2)",org.w3c.dom,com.sun.jersey.spi.container.
+ servlet
+Tool: Bnd-2.1.0.20130426-122213
+Web-ContextPath: /restconf
