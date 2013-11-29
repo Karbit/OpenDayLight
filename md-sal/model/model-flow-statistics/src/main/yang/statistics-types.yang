@@ -1,0 +1,63 @@
+module opendaylight-statistics-types {
+    namespace "urn:opendaylight:model:statistics:types";
+    prefix stat-types;
+
+    import ietf-yang-types {prefix yang;}
+    import opendaylight-inventory {prefix inv;revision-date "2013-08-19";}
+    
+    revision "2013-09-25" {
+        description "Initial revision of flow service";
+    }    
+
+    grouping node-connector-statistics {
+    	container packets {
+            leaf received {
+                type uint64;
+            }
+            leaf transmitted {
+                type uint64;
+            }
+        }
+        container bytes {
+            leaf received {
+                type uint64;
+            }
+            leaf transmitted {
+                type uint64;
+            }
+        }
+        leaf receive-drops {
+            type uint64;
+        }
+        leaf transmit-drops {
+            type uint64;
+        }
+        leaf receive-errors {
+            type uint64;
+        }
+        leaf transmit-errors {
+            type uint64;
+        }
+        leaf receive-frame-error {
+            type uint64;
+        }
+        leaf receive-over-run-error {
+            type uint64;
+        }
+        leaf receive-crc-error {
+            type uint64;
+        }
+        leaf collision-count {
+            type uint64;
+        }
+        
+        container duration {
+            leaf second {
+                type yang:counter32;
+            }
+            leaf nanosecond {
+                type yang:counter32;
+            }
+        }
+    }
+}

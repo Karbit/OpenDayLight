@@ -1,0 +1,131 @@
+module flow-node-inventory {
+    namespace "urn:opendaylight:flow:inventory";
+    prefix flownode;
+
+    import yang-ext {prefix ext; revision-date "2013-07-09";}
+    import ietf-inet-types {prefix inet; revision-date "2010-09-24";}
+    import ietf-yang-types {prefix yang; revision-date "2010-09-24";}
+    import opendaylight-port-types {prefix port;revision-date "2013-09-25";}
+    import opendaylight-inventory {prefix inv;revision-date "2013-08-19";}
+    
+    revision "2013-08-19" {
+        description "Flow Capable Node extensions to the Inventory model";
+    }
+
+    grouping feature {
+        leaf support-state {
+            type inv:support-type;
+        }
+    }
+
+    grouping queue {
+         leaf queue-id {
+            type uint32;
+            description "id for the specific queue";
+            mandatory true; 
+        }
+        container properties {
+            leaf minimum-rate {
+                type uint32;
+            }
+            leaf maximum-rate{
+                type uint32;
+            }
+        }
+    }
+
+    grouping table {
+
+
+    }
+
+    grouping flow-node {
+
+        leaf manufacturer {
+            type string;
+        }
+        leaf hardware {
+            type string;
+        }
+        leaf software {
+            type string;
+        }
+        leaf serial-number {
+            type string;
+        }
+        leaf description {
+            type string;
+        }
+
+        container tables {
+            uses feature;
+            list table {
+                uses table;
+            }
+        }
+        
+        container group-tables {
+            uses feature;
+        }
+        
+        container supported-match-types {
+            list match-type {
+                uses feature;
+                leaf match {
+                    type string; // FIXME: Add identity
+                }
+                
+            }
+        }
+        
+        container supported-instructions {
+            list instruction-type {
+                uses feature;
+                leaf instruction {
+                    type string; // FIXME: Add identity
+                }
+            }
+        }
+
+        container supported-actions {
+            list action-type {
+                uses feature;
+
+                leaf action {
+                    type string; // FIXME: Add identity
+                }
+            }
+        }
+    }
+    
+    grouping flow-node-connector {
+
+        uses port:flow-capable-port;
+    }
+
+    augment "/inv:nodes/inv:node" {
+        ext:augment-identifier "flow-capable-node";
+        uses flow-node;
+    }
+
+    augment "/inv:nodes/inv:node/inv:node-connector" {
+        ext:augment-identifier "flow-capable-node-connector";
+        uses flow-node-connector;
+    }
+
+    augment "/inv:node-updated" {
+        ext:augment-identifier "flow-capable-node-updated";
+        uses flow-node;
+    }
+
+    augment "/inv:node-updated/inv:node-connector" {
+        //ext:identical-augment "flow-capable-node-connector";
+        ext:augment-identifier "flow-capable-node-connector-update-fields";
+        uses flow-node-connector;
+    }
+
+    augment "/inv:node-connector-updated" {
+        ext:augment-identifier "flow-capable-node-connector-updated";
+        uses flow-node-connector;
+    }
+}

@@ -1,0 +1,202 @@
+module opendaylight-group-types {
+    namespace "urn:opendaylight:group:types";
+    prefix group;
+
+    import ietf-inet-types {prefix inet; revision-date "2010-09-24";}
+    import ietf-yang-types {prefix yang; revision-date "2010-09-24";}   
+    import opendaylight-action-types {prefix action;}
+
+    revision "2013-10-18" {
+        description "Initial revision of group service";
+    }
+
+    typedef group-id {
+        type uint32;
+    }
+    
+    grouping group-types {
+        leaf group-type {
+            type enumeration {
+                enum group-all;
+                enum group-select;
+                enum group-indirect;
+                enum group-ff;
+            }
+        }
+    }
+    
+    typedef group-capabilities { 
+        	type enumeration {
+                enum select-weight;
+                enum select-liveness;
+                enum chaining;
+                enum chaining-checks;
+            }   
+        }
+    
+    
+    grouping group {
+        
+        uses group-types;
+        
+        leaf group-id {
+            type group-id;
+        }
+        
+        leaf group-name {
+            type string;
+        }
+        
+        leaf container-name {
+            type string; 
+        }
+        
+        leaf install {
+            type boolean; 
+        } 
+        
+        leaf barrier {
+            type boolean; 
+        }       
+        
+        container buckets {
+            list bucket {
+                key "order";
+                leaf order {
+                    type int32;
+                }
+                
+                leaf weight {
+                    type uint16;
+                }
+                
+                leaf watch_port {
+                    type uint32;
+                }
+                
+                leaf watch_group {
+                    type uint32;
+                }
+                
+                uses action:action-list;
+            }
+        }
+    }
+    
+    grouping group-statistics {
+            
+        leaf group-id {
+            type int32;
+        }
+        
+        leaf ref-count {
+            type yang:counter32;
+        }
+        
+        leaf packet-count {
+            type yang:counter64;
+        } 
+        
+        leaf byte-count {
+            type yang:counter64;
+        }
+
+        container duration {
+            leaf second {
+                type yang:counter32;
+            }
+            leaf nanosecond {
+                type yang:counter32;
+            }
+        }
+        
+        container buckets {
+            list bucket-counter {
+                key "order";
+                leaf order {
+                    type int32;
+                }
+                
+                leaf packet-count {
+                    type yang:counter64;
+                } 
+        
+                leaf byte-count {
+                    type yang:counter64;
+                }
+            }
+        }       
+    }
+
+    grouping group-features {
+        leaf types {
+            type bits {
+            	bit group-all;
+            	bit group-select;
+            	bit group-indirect;
+            	bit group-ff;
+            }
+        }
+            
+        leaf capabilities { 
+        	type bits {
+                bit select-weight;
+                bit select-liveness;
+                bit chaining;
+                bit chaining-checks;
+            }   
+        }
+
+        leaf-list max-groups {
+            type uint32;
+            description "Maximum number of groups for each type";
+            max-elements 4;
+        }
+            
+        leaf-list actions {
+            type uint32;
+            description "Bitmap number OFPAT_* that are supported";
+            max-elements 4;
+        }
+    }
+    
+    grouping group-statistics-request {
+        list group-stats {
+            key "group-id";         
+            
+            leaf group-id {
+                type int32;
+            }           
+        }
+    }
+    
+    
+    grouping group-statistics-reply {
+    	
+        list group-stats {
+            key "group-stats-order";
+            leaf group-stats-order {
+                type int32;
+            }
+            
+            uses group-statistics;
+        }
+    }
+    
+    grouping group-desc-stats-reply {
+   	
+        list group-desc-stats {
+            key "order-id";         
+            leaf order-id {
+                type int32;
+            }
+            
+            uses group;
+        }
+    }
+    
+    grouping group-features-reply {
+    	uses group-features;
+    }
+    
+}

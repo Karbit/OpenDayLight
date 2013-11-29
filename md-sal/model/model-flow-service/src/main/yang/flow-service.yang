@@ -1,0 +1,107 @@
+module sal-flow {
+    namespace "urn:opendaylight:flow:service";
+    prefix flow;
+
+    import yang-ext {prefix ext; revision-date "2013-07-09";}
+    import opendaylight-inventory {prefix inv;revision-date "2013-08-19";}
+    import ietf-inet-types {prefix inet; revision-date "2010-09-24";}
+    import opendaylight-flow-types {prefix types;revision-date "2013-10-26";}
+    import flow-capable-transaction {prefix tr;}
+    import flow-errors {prefix error;}
+
+    revision "2013-08-19" {
+        description "Initial revision of flow service";
+    }
+
+    typedef flow-table-ref {
+        type instance-identifier;
+    }
+    
+    grouping node-flow-removed {
+        leaf node {
+            ext:context-reference "inv:node-context";
+            type inv:node-ref;
+        }
+        leaf flow-table {
+            type flow-table-ref;
+        }
+        uses types:flow-mod-removed;
+    }
+    
+    grouping node-flow {
+        uses "inv:node-context-ref";
+
+        leaf flow-table {
+            type flow-table-ref;
+        }
+        uses types:flow;
+    }
+
+    /** Base configuration structure **/
+    grouping flow-update {
+        uses "inv:node-context-ref";
+
+        container original-flow {
+            uses types:flow;
+        }
+        container updated-flow {
+            uses types:flow;
+        }
+    }
+
+    rpc add-flow {
+        input {
+            uses node-flow;
+            uses tr:transaction-aware;
+        }
+        output {
+            uses tr:transaction-aware;
+        }
+    }
+
+    rpc remove-flow {
+        input {
+            uses node-flow;
+            uses tr:transaction-aware;
+        }
+        output {
+            uses tr:transaction-aware;
+        }
+    }
+
+    rpc update-flow {
+        input {
+            uses flow-update;
+            uses tr:transaction-aware;
+        }
+        output {
+            uses tr:transaction-aware;
+        }
+    }
+
+    notification flow-added {
+        uses node-flow;
+    }
+
+    notification flow-updated {
+        uses node-flow;
+    }
+
+    notification flow-removed {
+        uses node-flow;
+    }
+    
+    notification switch-flow-removed {
+        uses node-flow-removed;
+    }
+    
+    notification node-error-notification {
+        uses error:error-message;
+        uses tr:transaction-aware;
+    }
+    
+    notification node-experimenter-error-notification {
+        uses error:experimenter-error-message;
+        uses tr:transaction-aware;
+    }
+}
